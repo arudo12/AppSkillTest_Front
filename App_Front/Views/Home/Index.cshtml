@@ -1,0 +1,101 @@
+﻿@model App_Front.Models.CreateEditViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="content">
+    <section>
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "addEditForm", name = "addEditForm" }))
+        {
+            <div class="window-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="label-wrapper">
+                                    @Html.LabelFor(m => m.AggrementNumber)
+                                </div>
+                                <div class="control-wrapper">
+                                    <input type="text" id="AggrementNumber" placeholder="Input Agreement Number" maxlength="100">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="label-wrapper">
+                                    @Html.LabelFor(m => m.BranchID)
+                                </div>
+                                <div class="control-wrapper">
+                                    <input type="text" id="BranchID" placeholder="Input Branch Id" maxlength="10">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="label-wrapper">
+                                    @Html.LabelFor(m => m.NoBPKB)
+                                </div>
+                                <div class="control-wrapper">
+                                    <input type="text" id="NoBPKB" placeholder="Input No. BPKB" maxlength="100">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="label-wrapper">
+                                    @Html.LabelFor(m => m.TanggalBPKBIn)
+                                </div>
+                                <div class="control-wrapper">
+                                    <input type="date" id="TanggalBPKBIn" name="TanggalBPKBIn" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="label-wrapper">
+                                    @Html.LabelFor(m => m.TanggalBPKB)
+                                </div>
+                                <div class="control-wrapper">
+                                   <input type="date" id="TanggalBPKB" name="TanggalBPKBIn" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+
+                             <div class="form-group">
+                                <div class="label-wrapper">
+                                    @Html.LabelFor(m => m.NoFaktur)
+                                </div>
+                                <div class="control-wrapper">
+                                    <input type="text" id="NoFaktur" placeholder="Input No. Faktur" maxlength="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="label-wrapper">
+                                    @Html.LabelFor(m => m.TanggalFaktur)
+                                </div>
+                                <div class="control-wrapper">
+                                   <input type="date" id="TanggalFaktur" name="TanggalFaktur" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="label-wrapper">
+                                    @Html.LabelFor(m => m.NoPolisi)
+                                </div>
+                                <div class="control-wrapper">
+                                    <input type="text" id="NoPolisi" placeholder="Input Nomor Polisi" maxlength="20">
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-wrapper">
+                <button type="button" id="btnCancel" name="btnCancel" class="btn btn-secondary">Cancel</button>
+                <button type="button" id="btnSave" name="btnSave" class="btn btn-primary">Save</button>
+            </div>
+         }
+    </section>
+</div>
